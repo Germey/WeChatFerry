@@ -19,7 +19,7 @@
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{4de80b82-5f6a-4c4c-9d16-1574308110fa}</ProjectGuid>
     <RootNamespace>spy</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.20348.0</WindowsTargetPlatformVersion>
     <VcpkgTriplet Condition="'$(Platform)'=='x64'">x64-windows-static</VcpkgTriplet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -88,8 +88,8 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)com;$(SolutionDir)rpc;$(SolutionDir)rpc\nanopb;$(SolutionDir)rpc\proto;$(SolutionDir)smc;$(SolutionDir)spy;C:\Tools\vcpkg\installed\x64-windows-static\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)com;$(SolutionDir)rpc;$(SolutionDir)rpc\nanopb;$(SolutionDir)rpc\proto;$(SolutionDir)smc;$(SolutionDir)spy;D:\vcpkg\installed\x64-windows\include;C:\Tools\vcpkg\installed\x64-windows-static\include</AdditionalIncludeDirectories>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <OmitFramePointers>false</OmitFramePointers>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -97,6 +97,7 @@
       <PrecompiledHeaderOutputFile />
       <DisableSpecificWarnings>4251;4731;4819</DisableSpecificWarnings>
       <AdditionalOptions>/EHa %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard_C>Default</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -105,7 +106,7 @@
       <ModuleDefinitionFile>spy.def</ModuleDefinitionFile>
       <AdditionalOptions> /ignore:4099 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalLibraryDirectories>$(SolutionDir)smc;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>iphlpapi.lib;wsock32.lib;ws2_32.lib;crypt32.lib;Codec.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>iphlpapi.lib;wsock32.lib;ws2_32.lib;crypt32.lib;Codec.lib;D:\vcpkg\installed\x64-windows\lib\fmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PreBuildEvent>
@@ -137,7 +138,7 @@ xcopy /y $(OutDir)$(TargetFileName) $(SolutionDir)..\clients\python\wcferry</Com
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)com;$(SolutionDir)rpc;$(SolutionDir)rpc\nanopb;$(SolutionDir)rpc\proto;$(SolutionDir)smc;$(SolutionDir)spy;C:\Tools\vcpkg\installed\x64-windows-static\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\vcpkg\installed\x64-windows-static\include;D:\vcpkg\installed\x64-windows\include;$(SolutionDir)com;$(SolutionDir)rpc;$(SolutionDir)rpc\nanopb;$(SolutionDir)rpc\proto;$(SolutionDir)smc;$(SolutionDir)spy</AdditionalIncludeDirectories>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <OmitFramePointers>false</OmitFramePointers>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
