@@ -40,6 +40,7 @@ int WxInitSDK(bool debug, int port)
     if (status != 0) {
         return status;
     }
+    MessageBox(NULL, L"DLL路径获取成功", L"WxInitSDK", 0);
 
     status = OpenWeChat(&wcPid);
     if (status != 0) {

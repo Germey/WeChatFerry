@@ -2,7 +2,7 @@
 #include "psapi.h"
 #include <filesystem>
 #include <string>
-
+#include <iostream>
 #include "injector.h"
 #include "util.h"
 
@@ -121,6 +121,8 @@ static UINT64 GetFuncOffset(LPCWSTR dllPath, LPCSTR funcName)
     HMODULE dll = LoadLibrary(dllPath);
     if (dll == NULL) {
         MessageBox(NULL, L"获取 DLL 失败", L"GetFuncOffset", 0);
+        DWORD error = GetLastError();
+        cout << "LoadLibrary failed with error code: " << error << endl;
         return 0;
     }
 
