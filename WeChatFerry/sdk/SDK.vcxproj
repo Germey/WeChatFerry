@@ -119,7 +119,7 @@
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)com;$(SolutionDir)spy;C:\Tools\vcpkg\installed\x64-windows-static\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)com;$(SolutionDir)spy;D:\vcpkg\installed\x64-windows\include;D:\vcpkg\installed\x64-windows-static\include</AdditionalIncludeDirectories>
       <PrecompiledHeaderOutputFile />
       <SupportJustMyCode>true</SupportJustMyCode>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -131,6 +131,7 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
       <ModuleDefinitionFile>sdk.def</ModuleDefinitionFile>
+      <AdditionalDependencies>D:\vcpkg\installed\x64-windows\lib\fmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /y $(OutDir)$(TargetFileName) $(SolutionDir)Out

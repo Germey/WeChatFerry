@@ -137,7 +137,7 @@ xcopy /y $(OutDir)$(TargetFileName) $(SolutionDir)..\clients\python\wcferry</Com
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>D:\vcpkg\installed\x64-windows-static\include;D:\vcpkg\installed\x64-windows\include;$(SolutionDir)com;$(SolutionDir)rpc;$(SolutionDir)rpc\nanopb;$(SolutionDir)rpc\proto;$(SolutionDir)smc;$(SolutionDir)spy</AdditionalIncludeDirectories>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <OmitFramePointers>false</OmitFramePointers>
@@ -188,8 +188,8 @@ xcopy /y $(OutDir)$(TargetFileName) $(SolutionDir)..\clients\python\wcferry</Com
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)com;$(SolutionDir)rpc;$(SolutionDir)rpc\nanopb;$(SolutionDir)rpc\proto;$(SolutionDir)smc;$(SolutionDir)spy;C:\Tools\vcpkg\installed\x64-windows-static\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)com;$(SolutionDir)rpc;$(SolutionDir)rpc\nanopb;$(SolutionDir)rpc\proto;$(SolutionDir)smc;$(SolutionDir)spy;D:\vcpkg\installed\x64-windows\include;D:\vcpkg\installed\x64-windows-static\include</AdditionalIncludeDirectories>
       <OmitFramePointers>false</OmitFramePointers>
       <PrecompiledHeaderOutputFile />
       <DisableSpecificWarnings>4251;4731;4819</DisableSpecificWarnings>
@@ -204,7 +204,7 @@ xcopy /y $(OutDir)$(TargetFileName) $(SolutionDir)..\clients\python\wcferry</Com
       <EnableUAC>false</EnableUAC>
       <ModuleDefinitionFile>spy.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>$(SolutionDir)smc;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>iphlpapi.lib;wsock32.lib;ws2_32.lib;crypt32.lib;Codec.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>iphlpapi.lib;wsock32.lib;ws2_32.lib;crypt32.lib;Codec.lib;D:\vcpkg\installed\x64-windows\lib\fmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions> /ignore:4099 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PreBuildEvent>
